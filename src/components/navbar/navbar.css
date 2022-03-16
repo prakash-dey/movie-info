@@ -1,0 +1,61 @@
+/* Nav bar */
+
+@import url("../../css-var/_variables.css");
+ 
+.nav-bar {
+  height: var(--header-height);
+  padding: 0.2em 2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  width: 100%;
+  transition: height 0.5s ease, background-color 0.5s ease;
+  z-index: 100;
+}
+.shrink {
+  height: 4rem;
+  background-color: var(--body-bg);
+}
+
+.nav-logo {
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+.nav-logo i {
+  color: lightgreen;
+}
+.nav-avatar {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+ul {
+  display: flex;
+  min-width: 30%;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+ul li {
+  color: var(--txt-color);
+  margin-left: 2rem;
+  cursor: pointer;
+}
+li.active::after,
+li:hover::after {
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .nav-logo {
+    height: 3rem;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+li.active{
+  text-decoration: underline;
+  color: var(--main-color);
+}

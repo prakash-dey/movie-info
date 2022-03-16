@@ -1,0 +1,45 @@
+@import url("../../css-var/_variables.css");
+
+.footer {
+  position: relative;
+  padding: 6rem 2rem;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer__content {
+  max-width: 1000px;
+}
+
+.footer__content__logo {
+  display: flex;
+  align-items: centre;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.footer__content__menus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (max-width: 600px) {
+  .footer__content__menus {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.footer__content__menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 1rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.footer__content > * ~ * {
+  margin-top: 1rem;
+}
